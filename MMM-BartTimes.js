@@ -4,6 +4,7 @@ Module.register("MMM-BartTimes", {
     defaults: {
         station : '19th',
         key : 'MW9S-E7SL-26DU-VV8V', // Public BART API key
+        train_blacklist: [],
         updateInterval : 30000, // 30 seconds
     },
 
@@ -47,10 +48,13 @@ Module.register("MMM-BartTimes", {
         table.className = "small";
 
         this.info.trains.forEach(train_name => {
-            console.log(train_name)
+
+            if (this.config.train_blacklist.includes(train_name)) {
+                console.log('gottem')
+                return;
+            }
 
             var row = document.createElement("tr");
-
             table.appendChild(row);
 
             var trainCell = document.createElement("td");
@@ -76,9 +80,9 @@ Module.register("MMM-BartTimes", {
     getHeader: function() {
         if (this.info) {
             console.log(this.info.station_name);
-            return this.info.station_name + ' BART Times';
+            return this.info.station_name + ' BART Departure Times';
         }
-        return this.data.header;
+        return 'BART Departure Times';
     },
 
     // Override notification handler.
