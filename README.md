@@ -6,7 +6,7 @@ This exists thanks to BART providing an easy public API, which can be found [her
 
 ### Installation
 1. Navigate to the magic mirror modules directory and clone this repository there.
-2. Inside the `MMM-BartTimes` folder, run `npm install` to install the required dependencies.
+2. Inside the `MMM-BartTimes` folder, run `npm install url requests` to install the two required dependencies.
 3. Modify `config.js` to include `MMM-BartTimes`. An example config can be seen below.
 
 ### Configuration
@@ -23,8 +23,13 @@ Example configuration file:
 	position: 'top_left',
 	config: {
 		station: '19th',
-		train_blacklist: ['Dublin/Pleasanton', 'MacArthur'],
+		train_blacklist: ['Dublin/Pleasanton'],
 		key: 'IFYO-UWAN-TYOU-ROWN',
 	}
 },
 ```
+
+### Screenshot
+When working, the display should look something like this:
+
+![MMM-BartTimes screenshot](screenshot.png)
