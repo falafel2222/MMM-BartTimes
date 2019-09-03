@@ -11,10 +11,11 @@ This exists thanks to BART providing an easy public API, which can be found [her
 
 ### Configuration
 
-1. Determine the abbreviation for your BART station of choice.
-Abbreviations can be found [here](http://api.bart.gov/api/stn.aspx?cmd=stns&key=MW9S-E7SL-26DU-VV8V) (under the tag `<abbr>`)
-2. (Optional) If you want your own API key so you aren't at the mercy of BART changing their public one, you can request one [here](http://api.bart.gov/api/register.aspx).
-3. (Even more optional) If you hate clutter and don't want to see some trains, you can add them to the train blacklist.
+| Config Option | Type | Description |
+|:------------- |:--------- |:----------- |
+| `station` | string | The station abbreviation for your BART station of choice. Abbreviations can be found [here](http://api.bart.gov/api/stn.aspx?cmd=stns&key=MW9S-E7SL-26DU-VV8V) (under the tag `<abbr>`). |
+| `key` | string (optional) | API key if you want your own so you aren't at the mercy of BART changing their public one.  You can request a key [here](http://api.bart.gov/api/register.aspx). |
+| `train_blacklist` | list of strings (optional) | Line names included in this list will not be displayed on your Magic Mirror.|
 
 Example configuration file:
 ```
