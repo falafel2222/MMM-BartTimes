@@ -2,7 +2,6 @@ Module.register("MMM-BartTimes", {
 
     // Module config defaults.
     defaults: {
-        station : '19th',
         key : 'MW9S-E7SL-26DU-VV8V', // Public BART API key
         train_blacklist: [],
         updateInterval : 30000, // 30 seconds
