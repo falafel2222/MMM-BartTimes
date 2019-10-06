@@ -2,7 +2,7 @@ var request = require('request');
 var NodeHelper = require("node_helper");
 var { URL } = require('url');
 
-BASE_URL = 'http://api.bart.gov/api/etd.aspx';
+BASE_URL = 'https://api.bart.gov/api/etd.aspx';
 
 module.exports = NodeHelper.create({
 
